@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport Fest 2026 - Universidad Mariano Gálvez</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!-- HERO / HEADER -->
+    <!-- ============================================================ -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mx-auto text-center hero-content">
+                    <div class="hero-badge">🏆 EVENTO OFICIAL</div>
+                    <h1 class="hero-title">SPORT FEST <span class="highlight">2026</span></h1>
+                    <p class="hero-subtitle">Universidad Mariano Gálvez de Guatemala</p>
+                    <p class="hero-text">Ciencia y Sabiduría para la Transformación</p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" id="statEvents">0</span>
+                            <span class="stat-label">Eventos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="statSports">0</span>
+                            <span class="stat-label">Deportes</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" id="statResults">0</span>
+                            <span class="stat-label">Resultados</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#schedule-tab" class="btn btn-hero-primary" onclick="document.getElementById('pills-schedule-tab').click()">
+                            <i class="bi bi-calendar-event"></i> Ver Cronograma
+                        </a>
+                        <a href="#rules-tab" class="btn btn-hero-secondary" onclick="document.getElementById('pills-rules-tab').click()">
+                            <i class="bi bi-file-text"></i> Reglamentos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 40" preserveAspectRatio="none">
+                <path d="M0,20 C360,40 720,0 1080,20 L1440,20 L1440,40 L0,40 Z" fill="#0A1E3D"/>
+            </svg>
+        </div>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- NAVEGACIÓN STICKY -->
+    <!-- ============================================================ -->
+    <nav class="sticky-nav" id="mainNav">
+        <div class="container">
+            <ul class="nav nav-pills justify-content-center flex-wrap" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-schedule-tab" data-bs-toggle="pill" data-bs-target="#pills-schedule" type="button" role="tab">
+                        <i class="bi bi-calendar3"></i> Cronograma
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-inauguration-tab" data-bs-toggle="pill" data-bs-target="#pills-inauguration" type="button" role="tab">
+                        <i class="bi bi-mic"></i> Inauguración
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-rules-tab" data-bs-toggle="pill" data-bs-target="#pills-rules" type="button" role="tab">
+                        <i class="bi bi-list-check"></i> Reglas
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-dresscode-tab" data-bs-toggle="pill" data-bs-target="#pills-dresscode" type="button" role="tab">
+                        <i class="bi bi-person-vcard"></i> Vestimenta
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-awards-tab" data-bs-toggle="pill" data-bs-target="#pills-awards" type="button" role="tab">
+                        <i class="bi bi-trophy"></i> Premiación
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ============================================================ -->
+    <!-- CONTENIDO PRINCIPAL -->
+    <!-- ============================================================ -->
+    <main class="main-content">
+        <div class="container">
+            <div class="tab-content" id="pills-tabContent">
+
+                <!-- ================================================== -->
+                <!-- PESTAÑA 1: CRONOGRAMA -->
+                <!-- ================================================== -->
+                <div class="tab-pane fade show active" id="pills-schedule" role="tabpanel">
+                    <h2 class="section-title"><i class="bi bi-calendar-event-fill"></i> Cronograma Oficial</h2>
+                    <p class="section-subtitle">Consulta la programación completa del Sport Fest 2026</p>
+
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all"><i class="bi bi-grid"></i> Todos</button>
+                        <button class="filter-btn" data-filter="inauguration"><i class="bi bi-mic"></i> Inauguración</button>
+                        <button class="filter-btn" data-filter="football"><i class="bi bi-soccer"></i> Fútbol</button>
+                        <button class="filter-btn" data-filter="athletics"><i class="bi bi-person-running"></i> Atletismo</button>
+                        <button class="filter-btn" data-filter="basketball"><i class="bi bi-dribbble"></i> Básquetbol</button>
+                        <button class="filter-btn" data-filter="swimming"><i class="bi bi-water"></i> Natación</button>
+                        <button class="filter-btn" data-filter="chess"><i class="bi bi-chess-king"></i> Ajedrez</button>
+                        <button class="filter-btn" data-filter="awards"><i class="bi bi-trophy"></i> Premiación</button>
+                    </div>
+
+                    <div class="schedule-container" id="scheduleContainer">
+                        <!-- El JS llenará esto -->
+                    </div>
+                </div>
+
+                <!-- ================================================== -->
+                <!-- PESTAÑA 2: INAUGURACIÓN -->
+                <!-- ================================================== -->
+                <div class="tab-pane fade" id="pills-inauguration" role="tabpanel">
+                    <h2 class="section-title"><i class="bi bi-mic-fill"></i> Acto de Inauguración</h2>
+                    <p class="section-subtitle">Aula Magna - 07:00 h · 6 de Julio, 2026</p>
+
+                    <div class="row g-4">
+                        <div class="col-lg-8">
+                            <div class="card rule-card">
+                                <div class="card-header" style="background: var(--accent); color: var(--dark);">
+                                    <i class="bi bi-clock-history"></i> Protocolo del Evento
+                                </div>
+                                <div class="card-body">
+                                    <div class="timeline-vertical" id="inaugurationProtocol">
+                                        <!-- JS llenará esto -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card rule-card">
+                                <div class="card-header" style="background: var(--accent); color: var(--dark);">
+                                    <i class="bi bi-star-fill"></i> Nuestros Valores
+                                </div>
+                                <div class="card-body">
+                                    <div class="values-grid" id="inaugurationValues">
+                                        <!-- JS llenará esto -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================================================== -->
+                <!-- PESTAÑA 3: REGLAS -->
+                <!-- ================================================== -->
+                <div class="tab-pane fade" id="pills-rules" role="tabpanel">
+                    <h2 class="section-title"><i class="bi bi-list-check"></i> Reglamento General</h2>
+                    <p class="section-subtitle">Normas para espectadores y participantes</p>
+
+                    <div class="card rule-card">
+                        <div class="card-header" style="background: var(--accent); color: var(--dark);">
+                            <i class="bi bi-building"></i> Aula Magna - Reglas para Espectadores
+                        </div>
+                        <div class="card-body">
+                            <div class="rules-grid" id="inaugurationRules">
+                                <!-- JS llenará esto -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================================================== -->
+                <!-- PESTAÑA 4: VESTIMENTA -->
+                <!-- ================================================== -->
+                <div class="tab-pane fade" id="pills-dresscode" role="tabpanel">
+                    <h2 class="section-title"><i class="bi bi-person-vcard"></i> Código de Vestimenta</h2>
+                    <p class="section-subtitle">Instrucciones para piscina y atletismo</p>
+
+                    <div class="row g-4">
+                        <!-- ===== PISCINA ===== -->
+                        <div class="col-lg-6">
+                            <div class="card rule-card pool-card">
+                                <div class="card-header" style="background: var(--accent); color: var(--dark);">
+                                    <i class="bi bi-water"></i> Piscina Universitaria
+                                </div>
+                                <div class="card-body">
+                                    <blockquote class="bible-verse" id="poolBible">
+                                        <!-- JS -->
+                                    </blockquote>
+                                    
+                                    <h6 class="mt-3"><i class="bi bi-person-female"></i> Mujeres</h6>
+                                    <div id="poolWomen"><!-- JS --></div>
+                                    
+                                    <h6 class="mt-3"><i class="bi bi-person-fill"></i> Hombres</h6>
+                                    <div id="poolMen"><!-- JS --></div>
+                                    
+                                    <h6 class="mt-3"><i class="bi bi-list-check"></i> Reglas de Uso</h6>
+                                    <div id="poolRules" class="rules-grid"><!-- JS --></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ===== ATLETISMO ===== -->
+                        <div class="col-lg-6">
+                            <div class="card rule-card athletics-card">
+                                <div class="card-header" style="background: var(--accent); color: var(--dark);">
+                                    <i class="bi bi-person-running"></i> Competencia de Atletismo
+                                </div>
+                                <div class="card-body">
+                                    <blockquote class="bible-verse" id="athleticsBible">
+                                        <!-- JS -->
+                                    </blockquote>
+
+                                    <h6 class="mt-3"><i class="bi bi-list-check"></i> Principios Generales</h6>
+                                    <div id="athleticsPrinciples" class="rules-grid">
+                                        <!-- JS llenará esto -->
+                                    </div>
+                                    
+                                    <h6 class="mt-3"><i class="bi bi-person-female"></i> Mujeres</h6>
+                                    <div id="athleticsWomen"><!-- JS --></div>
+                                    
+                                    <h6 class="mt-3"><i class="bi bi-person-fill"></i> Hombres</h6>
+                                    <div id="athleticsMen"><!-- JS --></div>
+                                    
+                                    <h6 class="mt-3"><i class="bi bi-list-check"></i> Normas Complementarias</h6>
+                                    <div id="athleticsAdditional" class="rules-grid"><!-- JS --></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================================================== -->
+                <!-- PESTAÑA 5: PREMIACIÓN -->
+                <!-- ================================================== -->
+                <div class="tab-pane fade" id="pills-awards" role="tabpanel">
+                    <h2 class="section-title"><i class="bi bi-trophy-fill" style="color: var(--accent);"></i> Ceremonia de Premiación</h2>
+                    <p class="section-subtitle">11:30 h - Sedes correspondientes</p>
+
+                    <div class="card rule-card">
+                        <div class="card-header" style="background: var(--accent); color: var(--dark);">
+                            <i class="bi bi-calendar-check"></i> Horario de Premiaciones
+                        </div>
+                        <div class="card-body">
+                            <div class="schedule-awards" id="awardsSchedule">
+                                <!-- JS llenará esto -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================================================ -->
+    <!-- FOOTER -->
+    <!-- ============================================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="mb-0">🏆 Sport Fest 2026 - Universidad Mariano Gálvez de Guatemala</p>
+                    <small>Ciencia y Sabiduría para la Transformación</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- SCRIPTS -->
+    <!-- ============================================================ -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="data/content.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
